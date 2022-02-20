@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(name,weight) {
+          this.name = name;
+          this.weight = weight;
+          if(!this.weight) {
+                throw new Error ("weight is mandatory");
+            }
+        }
+        speak() {
+          console.log(`${this.name} makes a noise`);
+        }
+        weighs(){
+              console.log(`${this.weight} KG`);
+          } // dry means do not repete yourself
+      }
+      class Lion extends Animal {
+          constructor(name , weight) {
+              super(name, weight);
+          }
+          speak() {
+              console.log(`${this.name} roars`);
+          }
+      }
+      class Dog extends Animal {
+        constructor(name,weight) {
+         
+          super(name,weight);
+        }
+     
+        speak() {
+          console.log(`${this.name} barks`);
+        }
+      }
+      let d = new Dog("nishant", 50);
+      d.speak();
+      let lion1 = new Lion("peter", 100 )
+      lion1.speak();
+      lion1.weighs();
+      
+    </script>
+  </body>
+</html>
