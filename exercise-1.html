@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The select element</h1>
+
+    <select name="cars" id="cars" onchange="display()">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+    <div id="message">
+        <h1></h1>
+        
+    </div>
+
+    <script>
+      function display(params) {
+        console.log(event.target.value);
+        // document.writeln(event.target.value)
+      }
+      function message(params) {
+        document.writeln(event.target.value)
+      }
+    </script>
+  </body>
+</html>
